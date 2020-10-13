@@ -8,6 +8,7 @@
     padding: 20px;
     width: 100%;
     min-width: 100px;
+    max-height: 400px;
     z-index: 1;
 }
 
@@ -16,6 +17,10 @@
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
+}
+
+.product > img:hover {
+    transform: scale(1.5);
 }
 
 .product__price {
