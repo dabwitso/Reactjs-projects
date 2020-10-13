@@ -1,3 +1,10 @@
+## Project notes
+Future features to include:
+1. Search bar functionality
+2. Ability to add item listing
+3. Subscriptions
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
