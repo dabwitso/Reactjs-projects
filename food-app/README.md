@@ -1,3 +1,9 @@
+
+# APP INFO
+Utilizes Api provided by edamam.com under free developer license with limited number of API calls within specified time period. 
+
+Rapid search may case short term response error.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
