@@ -29,35 +29,39 @@ const Wrapper = styled.div`
 `;
 
 const Menu = styled.div`
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: var(--color-mainDark);
-visibility: ${props => props.opened ? 'visible' : 'hidden'};
-transform: translateY(${props => props.opened ? '0%' : '-100%'});
-transition: all .1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-height: 100vh;
-position: fixed;
-margin-top: 6rem;
-top: 0;
-left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-mainDark);
+  visibility: ${(props) => (props.opened ? "visible" : "hidden")};
+  transform: translateY(${(props) => (props.opened ? "0%" : "-100%")});
+  transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  height: 100vh;
+  position: fixed;
+  margin-top: 6rem;
+  top: 0;
+  left: 0;
+  display: none;
 
+  @media ${(props) => props.theme.mediaQueries.smallest} {
+    display: flex;
+  }
 `;
 
 export const SideDrawer = () => {
   const [isOpened, setIsOpened] = useState(false);
   return (
-      <>
-    <FixedWrapper>
-      <Wrapper>
-        <Logo />
-        <Hamburger  opened={isOpened} clicked={()=>setIsOpened(!isOpened)}/>
-      </Wrapper>
-    </FixedWrapper>
-    <Menu opened={isOpened}>
-        <NavItems mobile />
-    </Menu>
+    <>
+      <FixedWrapper>
+        <Wrapper>
+          <Logo />
+          <Hamburger opened={isOpened} clicked={() => setIsOpened(!isOpened)} />
+        </Wrapper>
+      </FixedWrapper>
+      <Menu opened={isOpened}>
+        <NavItems mobile clicked={() => setIsOpened(false)} />
+      </Menu>
     </>
   );
 };
